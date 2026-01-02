@@ -232,12 +232,16 @@ function App() {
                 </button>
                 
                 {onboardingStep === onboardingSteps.length - 1 ? (
-                  <button
+                  <a
+                    href="https://github.com/mirabelle514/Homebase/blob/main/HomeBase.zip"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     onClick={closeOnboarding}
-                    className="flex gap-2 items-center px-6 py-2 font-medium text-white bg-blue-600 rounded-lg transition-colors hover:bg-blue-700"
+                    className="inline-flex gap-2 items-center px-6 py-2 font-medium text-white bg-blue-600 rounded-lg transition-colors hover:bg-blue-700"
                   >
                     Get Started
-                  </button>
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
                 ) : (
                   <button
                     onClick={nextStep}
